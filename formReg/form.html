@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="form">
+        <h1>Форма регистрации</h1>
+        <form name="formOne" class="formReg">
+            <label for="userName" class="form__label">Имя:</label>
+            <input type="text" id="firstName" name="userName" class="form__input" placeholder="Введите имя..." minlength="2" maxlength="20" required />
+            <br />
+            <p class="errorName"></p>
+
+            <label for="formEmail" class="form__label">Email:</label>
+                <input type="email" id="Email" name="email" class="form__input" placeholder="ivanov@mail.ru" required/>
+                <br />
+                <p class="errorEmail"></p>
+
+            <label for="userAge" class="form__label">Возраст:</label>
+                <input type="number" id="age" name="userAge" class="form__input" placeholder="Введите возраст..." required/>
+                <br />
+                <p class="errorAge"></p>
+            
+            <label class="form__label">Пол:</label>
+				<input
+					type="radio"
+					name="userSex"
+					value="Муж"
+					class="form__input" />
+                    <span>Муж</span>
+                <input
+                    type="radio"
+                    name="userSex"
+                    value="Жен"
+                    class="form__input" />
+                    <span>Жен</span>
+                    <br />
+                    <p class="errorSex"></p>
+
+            <label for="formSelect" class="form__label">Ваша профессия:</label>
+            <select id="firstSelect" name="optSelect" class="form__select" placeholder="Ваша профессия" required>
+                <option value="Опция 1">Врач</option>
+                <option value="Опция 2">Пилот</option>
+                <option value="Опция 3">Художник</option>
+                <option value="Опция 3">Программист</option>
+                <option value="Опция 3">Дизайнер</option>
+                <option value="Опция 3">Другое</option>
+            </select>
+            <p class="errorOpt"></p>
+            <br />
+            <label for="password" class="form__label">Пароль:</label>
+                <input type="password" id="userPassword" name="userPassword" class="form__input" placeholder="Введите ваш пароль" minlength="8" pattern="^[a-zA-Z]+$" required/>
+                <br />
+                <p class="errorPassword"></p>
+            <div class="check">
+                <input type="checkbox" id="checkbox" name="checkbox" class="form__checkbox" />
+                <label for="checkbox">Даю согласие на обработку персональных данных</label>
+                </div>
+                <p class="errorCheck"></p>
+            <div class="btn">
+                <input name="submitButton" type="submit" value="Отправить" class="form__submit" />
+                <p class="errorBtn"></p>
+            </div>
+            
+    </section>
+<script src="form.js"></script>
+</body>
+</html>
